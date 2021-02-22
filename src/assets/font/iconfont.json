@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19918018",
+      "name": "daochu",
+      "font_class": "daochu",
+      "unicode": "e6dc",
+      "unicode_decimal": 59100
+    },
+    {
+      "icon_id": "19918019",
+      "name": "daoru",
+      "font_class": "daoru",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    },
+    {
+      "icon_id": "19918023",
+      "name": "mima",
+      "font_class": "mima",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "19918036",
+      "name": "touxiang",
+      "font_class": "touxiang",
+      "unicode": "e6df",
+      "unicode_decimal": 59103
+    }
+  ]
+}
