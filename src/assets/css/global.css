@@ -7,3 +7,28 @@ body,
     margin: 0;
     padding: 0;
 }
+
+
+/* 面包屑 */
+
+.el-breadcrumb {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+
+/* 卡片 */
+
+.el-card {
+    box-shadow: 0 1px 1px rgb(0, 0, 0, 0.15) !important;
+    height: 100%;
+}
+
+.el-table {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.el-pagination {
+    margin-top: 15px;
+}
