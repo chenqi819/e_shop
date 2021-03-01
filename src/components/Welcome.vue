@@ -1,6 +1,7 @@
 <template>
     <div class=''>
-        <h2>Welcome</h2>
+        <el-calendar v-model="value">
+        </el-calendar>
     </div>
 </template>
 
@@ -9,6 +10,7 @@ export default {
     name: '',
     data() {
         return {
+            value: new Date()
         }
     },
     watch: {
