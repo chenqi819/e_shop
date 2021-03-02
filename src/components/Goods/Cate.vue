@@ -50,7 +50,7 @@
                      <el-input v-model="addCateInfo.cat_name"></el-input>
                 </el-form-item>
                 <el-form-item label="父级分类" label-width="80px">
-                    <el-cascader width="50%" v-model="selectdKeys" clearable change-on-select :options="cateData" @change="parpentCateChanged" :props="{ expandTrigger: 'hover', label:'cat_name', value: 'cat_id' }"></el-cascader>
+                    <el-cascader width="50%" v-model="selectdKeys" clearable :options="cateData" @change="parpentCateChanged" :props="{ expandTrigger: 'hover', label:'cat_name', value: 'cat_id' }"></el-cascader>
                 </el-form-item>
             </el-form>
             <!-- 底部区域 -->
@@ -145,10 +145,9 @@ export default {
         },
         // 打开添加分类对话框
         async showAddCateDialog () {
-            const { data: res } = await this.$http.get('categories', { params: this.queryInfo })
+            const { data: res } = await this.$http.get('categories')
             if (res.meta.status !== 200) return this.$message.erroe('获取分类数据列表错误')
-            this.cateData = res.data.result
-            console.log(res)
+            this.cateData = res.data
             this.addCateDialogVisible = true
         },
         // 添加分类对话框关闭时清理缓存

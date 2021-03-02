@@ -1,5 +1,5 @@
 <template>
-    <el-container class="home-container">
+    <el-container>
         <!-- 头部区域 -->
         <el-header>
             <div>
@@ -65,11 +65,9 @@ export default {
             activePath: ''
         }
     },
-    watch: {
-    },
+    watch: {},
     created () {
         this.getMenuList()
-        this.activePath = window.sessionStorage.getItem('activePath')
     },
     methods: {
         // 退出
@@ -81,7 +79,7 @@ export default {
         // 获取菜单项
         async getMenuList () {
             const { data: res } = await this.$http.get('menus')
-            if (res.meta.status !== 200) return this.message.error(res.meta.msg)
+            if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
             this.menuList = res.data
         },
         // 点击按钮 切换菜单的折叠与展开
@@ -100,8 +98,8 @@ export default {
 </script>
 
 <style scoped>
-.home-container{
-    height: 100%;
+.el-container{
+    height: 597px;
 }
 .el-header {
     background-color: #373d41;

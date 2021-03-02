@@ -142,14 +142,6 @@ export default {
             },
             // 选中的商品ID
             selectdKeys: [],
-            queryInfo: {
-                // [1,2,3]  值：1，2，3 分别表示显示一层二层三层分类列表
-                type: 3,
-                // 当前页数
-                pagenum: 1,
-                // 当前每页显示多少条数据
-                pagesize: 10
-            },
             activeName: 'many',
             // 动态参数数据
             manyTableData: [],
@@ -183,11 +175,11 @@ export default {
     },
     methods: {
         async getCateList () {
-            const { data: res } = await this.$http.get('categories', { params: this.queryInfo })
+            const { data: res } = await this.$http.get('categories')
             if (res.meta.status !== 200) {
                 return this.$message.error('获取商品分类失败')
             }
-            this.cateList = res.data.result
+            this.cateList = res.data
         },
         getSelceCateId () {
             this.getParmsData()
